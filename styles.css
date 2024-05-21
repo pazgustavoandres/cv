@@ -1,0 +1,13 @@
+footer {
+    background-color: #f19100;
+    text-align: center;
+    padding: 10px;
+}
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+footer a:hover {
+    color: #0073b1; /* Color de hover para LinkedIn, puedes cambiarlo según sea necesario */
+}
