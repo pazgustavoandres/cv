@@ -14,7 +14,7 @@
             padding: 0;
         }
         header {
-            background: #333;
+            background: #ff7829;
             color: #fff;
             display: flex;
             justify-content: space-between;
@@ -32,14 +32,14 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: none;
+            display: flex;
             flex-direction: column;
             position: fixed;
             top: 0;
             right: -250px;
             width: 250px;
             height: 100%;
-            background: #333;
+            background: #ff5100;
             padding-top: 60px;
             transition: 0.3s;
         }
@@ -54,7 +54,7 @@
             transition: 0.3s;
         }
         .nav-menu a:hover {
-            background: #575757;
+            background: #ff7829;
         }
         .open-menu {
             right: 0;
@@ -63,18 +63,18 @@
             padding: 20px;
         }
         footer {
-            background-color: #f1f1f1;
+            background-color: #ff5100;
             text-align: center;
             padding: 10px;
         }
         footer a {
             margin: 0 10px;
             text-decoration: none;
-            color: #000;
+            color: #fff;
             transition: all 0.3s ease;
         }
         footer a:hover {
-            color: #0073b1;
+            color: #ff7829;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer a i {
@@ -172,10 +172,10 @@
     <script>
         document.getElementById('menu-btn').addEventListener('click', function() {
             const navMenu = document.getElementById('nav-menu');
-            if (navMenu.style.right === '0px') {
-                navMenu.style.right = '-250px';
+            if (navMenu.classList.contains('open-menu')) {
+                navMenu.classList.remove('open-menu');
             } else {
-                navMenu.style.right = '0';
+                navMenu.classList.add('open-menu');
             }
         });
     </script>
