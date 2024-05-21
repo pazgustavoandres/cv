@@ -6,9 +6,62 @@
     <title>Curriculum Vitae de Gustavo Paz</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Incluye Font Awesome para los íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo img {
+            height: 40px;
+        }
+        .bar-btn {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: #333;
+            padding-top: 60px;
+            transition: 0.3s;
+        }
+        .nav-menu li {
+            margin: 0;
+        }
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: 0.3s;
+        }
+        .nav-menu a:hover {
+            background: #575757;
+        }
+        .open-menu {
+            right: 0;
+        }
+        main {
+            padding: 20px;
+        }
         footer {
             background-color: #f1f1f1;
             text-align: center;
@@ -21,32 +74,30 @@
             transition: all 0.3s ease;
         }
         footer a:hover {
-            color: #0073b1; /* Cambia el color al pasar el cursor */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
+            color: #0073b1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer a i {
-            font-size: 24px; /* Tamaño de los íconos */
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="#"><img src="logo.png" alt="Logo" /></a>
-            </div>
-            <input type="checkbox" id="check">
-            <label for="check" class="bar-btn">
-                <img src="menu-icon.png" alt="Menu Icon">
-            </label>
-            <ul class="nav-menu">
-                <li><a href="#about" class="active">Sobre mí</a></li>
-                <li><a href="#education">Educación</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#portfolio">Portafolio</a></li>
-            </ul>
-        </nav>
+        <div class="logo">
+            <a href="#"><img src="logo.png" alt="Logo" /></a>
+        </div>
+        <div class="bar-btn" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
+
+    <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="active">Sobre mí</a></li>
+        <li><a href="#education">Educación</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+    </ul>
 
     <main>
         <section id="about">
@@ -60,9 +111,6 @@
             <ul>
                 <li><strong>Nombre:</strong> Gustavo Andres Paz Navea</li>
                 <li><strong>Fecha de Nacimiento:</strong> 15 de Diciembre de 1992</li>
-                <li><strong>Estado Civil:</strong> Soltero</li>
-                <li><strong>Nacionalidad:</strong> Venezolana</li>
-                <li><strong>RUT:</strong> 26331138-8</li>
             </ul>
         </section>
 
@@ -85,7 +133,7 @@
 
         <section id="portfolio">
             <h2>Portafolio</h2>
-            <p><a href="https://www.linkedin.com/in/gustavo-paz">Ir a LinkedIn: Gustavo Paz</a></p>
+            <p><a href="https://www.linkedin.com/in/gustavo-paz-navea-81617516b">Ir a LinkedIn: Gustavo Paz</a></p>
             <div class="portfolio-gallery">
                 <div class="portfolio-item">
                     <img src="images/proyecto1.jpg" alt="Proyecto 1">
@@ -99,7 +147,6 @@
                     <img src="images/proyecto3.jpg" alt="Proyecto 3">
                     <p>Descripción del Proyecto 3</p>
                 </div>
-                <!-- Agrega más proyectos según sea necesario -->
             </div>
         </section>
     </main>
@@ -107,19 +154,30 @@
     <footer>
         <p>&copy; 2024 Gustavo Paz. Todos los derechos reservados.</p>
         <div>
-            <a href="www.linkedin.com/in/gustavo-paz-navea-81617516b" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/gustavo-paz-navea-81617516b" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/pazgustavoandres" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/tu-usuario" target="_blank" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://wa.me/+56930295628" target="_blank" aria-label="WhatsApp">
+            <a href="https://wa.me/tu-numero" target="_blank" aria-label="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="mailto:pazgustavoandres.com" target="_blank" aria-label="Correo">
+            <a href="mailto:tu-email@ejemplo.com" target="_blank" aria-label="Correo">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu.style.right === '0px') {
+                navMenu.style.right = '-250px';
+            } else {
+                navMenu.style.right = '0';
+            }
+        });
+    </script>
 </body>
 </html>

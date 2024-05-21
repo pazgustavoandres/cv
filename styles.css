@@ -1,13 +1,18 @@
-footer {
-    background-color: #f19100;
-    text-align: center;
-    padding: 10px;
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    padding-top: 60px;
+    transition: 0.3s;
 }
-footer a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #000;
-}
-footer a:hover {
-    color: #0073b1; /* Color de hover para LinkedIn, puedes cambiarlo según sea necesario */
+.open-menu {
+    right: 0;
 }
