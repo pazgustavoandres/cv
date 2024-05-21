@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Curriculum Vitae de Gustavo Paz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>cv</h1>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Logo" /></a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <img src="menu-icon.png" alt="Menu Icon">
+            </label>
+            <ul class="nav-menu">
+                <li><a href="#about" class="active">Sobre mí</a></li>
+                <li><a href="#education">Educación</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Gustavo Paz</h1>
+            <img src="foto-gustavo-paz.jpg" alt="Foto de Gustavo Paz" style="width:150px;">
+            <p>Apasionado por aprender nuevas tecnologías y herramientas de desarrollo. Con experiencia previa en trabajos de equipo y servicio al cliente, busco incorporarme al mundo tecnológico como programador full stack junior, donde pueda aplicar y ampliar mis conocimientos en desarrollo de software.</p>
+        </section>
+
+        <section id="personal-info">
+            <h2>Datos Personales</h2>
+            <ul>
+                <li><strong>Nombre:</strong> Gustavo Andres Paz Navea</li>
+                <li><strong>Fecha de Nacimiento:</strong> 15 de Diciembre de 1992</li>
+                <li><strong>Estado Civil:</strong> Soltero</li>
+                <li><strong>Nacionalidad:</strong> Venezolana</li>
+                <li><strong>RUT:</strong> 26331138-8</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>Formación</h2>
+            <ul>
+                <li>Curso de CSS, HTML, JavaScript: Fundamentos en desarrollo, creación de sitios web interactivos y responsivos.</li>
+                <li>Tercer Semestre de Ingeniería de Sistemas, Instituto Politécnico Universitario Santiago Marino: Base sólida en lógica de programación, estructuras de datos y algoritmos.</li>
+                <li>Inglés Avanzado, Centro Venezolano Americano Del Zulia</li>
+                <li>Uso de la terminal: Habilidades en la línea de comandos para navegar y gestionar archivos y directorios.</li>
+                <li>Git: Comprensión de qué es Git, su utilidad para el control de versiones y manejo de proyectos.</li>
+                <li>GitHub: Conocimiento de GitHub como plataforma de alojamiento de código y colaboración en proyectos.</li>
+            </ul>
+        </section>
+
+        <section id="currently-studying">
+            <h2>Cursando</h2>
+            <p>BootCamp FullStack</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portafolio</h2>
+            <p><a href="https://www.linkedin.com/in/gustavo-paz">Ir a LinkedIn: Gustavo Paz</a></p>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <img src="images/proyecto1.jpg" alt="Proyecto 1">
+                    <p>Descripción del Proyecto 1</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/proyecto2.jpg" alt="Proyecto 2">
+                    <p>Descripción del Proyecto 2</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/proyecto3.jpg" alt="Proyecto 3">
+                    <p>Descripción del Proyecto 3</p>
+                </div>
+                <!-- Agrega más proyectos según sea necesario -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gustavo Paz. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
