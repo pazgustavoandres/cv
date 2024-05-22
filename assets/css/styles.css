@@ -1,3 +1,23 @@
+body {
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #ff7829;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo img {
+    height: 40px;
+}
+.bar-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
 .nav-menu {
     list-style: none;
     padding: 0;
@@ -9,12 +29,44 @@
     right: -250px;
     width: 250px;
     height: 100%;
-    background: #ff7829;
+    background: #ff5100;
     padding-top: 60px;
     transition: 0.3s;
 }
+.nav-menu li {
+    margin: 0;
+}
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.3s;
+}
+.nav-menu a:hover {
+    background: #ff7829;
+}
+.open-menu {
+    right: 0;
+}
+main {
+    padding: 20px;
+}
 footer {
-    background-color: #ff7829;
+    background-color: #ff5100;
     text-align: center;
     padding: 10px;
+}
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+footer a:hover {
+    color: #ff7829;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer a i {
+    font-size: 24px;
 }
